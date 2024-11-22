@@ -21,6 +21,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 // JPA 핵심도구로는 Entity와 Repository가 있다
 // Entity는 자바객체를 DB가 이해할수 있게 잘 규격화 된 데이터
 // Repository는 Entity를 DB에 전달, 또는 처리
+// DB내에서 CRUD 처리는 SQL언어를 통해 insert,select,update,delete
+// 롬복: 코드를 간소화 시켜주는 라이브러리
+// Refactoring 코드의 구조 또는 성능을 개선하는 과정
+// logging 프로그램의 수행 과정을 기록한다
+
 
 
 
