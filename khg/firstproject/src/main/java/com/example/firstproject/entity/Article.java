@@ -6,9 +6,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-
+@NoArgsConstructor // 디폴트 생성자를 추가해주는 @
 @AllArgsConstructor
 @ToString
 @Entity // DB가 해당 객체를 인식 가능하게 하는 어노테이션
