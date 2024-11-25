@@ -11,10 +11,13 @@
     {{#articleList}}  <!--articlelist 사용하기 위한 작업 -->
         <tr>
             <th>{{id}}</th>
-            <td>{{title}}</td>
+            <td><a href="/articles/{{id}}">{{title}}</a></td>
             <td>{{content}}</td>
         </tr>
     {{/articleList}}
     </tbody>
 </table>
+
+<a href="/articles/new">New Article</a>  <!--articles/new로 요청을 보낼 수 있느 버튼 생성 -->
+
 {{>layouts/footer}}

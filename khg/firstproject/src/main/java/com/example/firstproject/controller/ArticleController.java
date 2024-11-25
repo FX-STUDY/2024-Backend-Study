@@ -30,33 +30,26 @@ public class ArticleController {
     @PostMapping("/articles/create")  // post방식으로 폼데이터를 받는 @
     public String createArticle(ArticleForm form) { // form 에어 데이터를 받는 법 그 받은 객체는 dto
         log.info(form.toString());
-
         //System.out.println(form.toString());  -> 로깅기능으로 대체!
-
-
-
 
         // 1. DTO를 변화 Entity
         Article article = form.toEntity();
         //System.out.println(article.toString());
         log.info(article.toString());
 
-
         // 2. Repository에게 Entitiy를 DB안에 저장하게 함!
         Article saved = articleRepository.save(article);
         //System.out.println(saved.toString());
         log.info(saved.toString());
 
-        return "";
+        return "redirect:/articles/" + saved.getId();  // 리타이렉트 articles/{id} url로 전송
     }
 
     @GetMapping("/articles/{id}") // id위치는 변하는 수다
     public String show(@PathVariable Long id, Model model){ // url주소로부터 데이터 받는 @
         log.info("id = " + id);
-
         // 1: id로 데이터를 가져옴
         Article articleEntity = articleRepository.findById(id).orElse(null); // repository를 통해 id값을 통해 데이터 조회
-
 
         // 2: 가져온 데이터를 모델에 등록!
         model.addAttribute("article", articleEntity);

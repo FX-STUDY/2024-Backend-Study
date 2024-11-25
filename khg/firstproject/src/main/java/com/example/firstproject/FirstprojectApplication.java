@@ -24,6 +24,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // Refactoring은 코드의 구조 성능을 개선하는 작업
 // logging은 프로그램의 수행 과정을 기록을 남기는 거
 
+// Link와 Redirect
+// Link: for Request, Redirect: for Response
+
 
 @SpringBootApplication
 public class FirstprojectApplication {
